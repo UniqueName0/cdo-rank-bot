@@ -21,7 +21,7 @@ class MyClient(discord.Client):
 client = MyClient()
         
 @client.event
-async def on_message(ctx):
+async def on_message(ctx,channel):
   attachment = ctx.attachments[0]
   response = requests.get(attachment.url)
 
@@ -30,7 +30,7 @@ async def on_message(ctx):
   file.close()
   ranktext = pytesseract.image_to_string(Image.open("rankpic.png"))
   print(ranktext)
-  await ctx.reply(ranktext)
+  await channel.send(ranktext)
 
 
 
