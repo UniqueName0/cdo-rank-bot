@@ -37,8 +37,8 @@ async def on_message(ctx):
   file.write(response.content)
   file.close()
 
-  z = Color(rgb = (255, 255, 0))
-  x = Color(rgb = (153, 102, 0))
+  z = Color("#ffff00")
+  x = Color("#996600")
   c = list(x.range_to(z, 6))
 
   img = cv2.imread('rankpic.png')
