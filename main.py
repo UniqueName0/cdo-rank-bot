@@ -37,7 +37,8 @@ async def on_message(ctx):
 
   ranktext = pytesseract.image_to_string(Image.open('rankpic-edited.png'),config='--psm 11')
   print(ranktext)
-  
+  await ctx.channel.send("edited pic")
+  await ctx.channel.send(file=discord.File('rankpic_edited.png'))
     
     
     
