@@ -2,6 +2,7 @@ import discord
 from discord.ext import commands
 import os
 import requests
+import count
 
 try:
     from PIL import Image
