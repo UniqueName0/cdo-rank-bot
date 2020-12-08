@@ -30,7 +30,7 @@ async def on_message(ctx):
   file.close()
   ranktext = pytesseract.image_to_string(Image.open("rankpic.png"))
   print(ranktext)
-  await ctx.channel.id.send(ranktext)
+  await ctx.channel.send(ranktext)
 
 
 
