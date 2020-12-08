@@ -24,6 +24,10 @@ client = MyClient()
         
 @client.event
 async def on_message(ctx):
+    if ctx.author == client.user:
+        return
+      if ctx.author.bot: return
+    
   attachment = ctx.attachments[0]
   response = requests.get(attachment.url)
 
@@ -32,13 +36,13 @@ async def on_message(ctx):
   file.close()
 
   img = cv2.imread('rankpic.png')
-  img[img != [207, 255, 255]] = 255 # change everything to white where pixel is not black
+  img[img != [255, 255, 207]] = 255 # change everything to white where pixel is not black
   cv2.imwrite('rankpic-edited.png', img)
 
   ranktext = pytesseract.image_to_string(Image.open('rankpic-edited.png'),config='--psm 11')
   print(ranktext)
   await ctx.channel.send("edited pic")
-  #await ctx.channel.send(file=discord.File('rankpic-edited.png'))
+  await ctx.channel.send(file=discord.File('rankpic-edited.png'))
     
     
     
