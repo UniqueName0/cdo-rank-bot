@@ -42,6 +42,7 @@ async def on_message(ctx):
         await ctx.channel.send("Persona rank")
   elif ranktext.count("Demigod") > 1:
         await ctx.channel.send("Demigod rank")
+  await ctx.send(ranktext)
 
 
 
