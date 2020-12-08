@@ -30,7 +30,7 @@ async def on_message(ctx):
   file.close()
   ranktext = pytesseract.image_to_string(Image.open("rankpic.png"),config='--psm 11')
   print(ranktext)
-  if ranktext.count("Titan") > 1:
+  if ranktext.count("Titan") == 1:
         await ctx.channel.send("titan rank")
   elif ranktext.count("Angelus") == 1:
         await ctx.channel.send("angelus rank")
