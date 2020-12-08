@@ -32,17 +32,17 @@ async def on_message(ctx):
   print(ranktext)
   if ranktext.count("Titan") > 1:
         await ctx.channel.send("titan rank")
-  elif ranktext.count("Angelus") > 1:
+  elif ranktext.count("Angelus") == 1:
         await ctx.channel.send("angelus rank")
-  elif ranktext.count("Ofanim") > 1:
+  elif ranktext.count("Ofanim") == 1:
         await ctx.channel.send("ofanim rank")
-  elif ranktext.count("Cherubim") > 1:
+  elif ranktext.count("Cherubim") == 1:
         await ctx.channel.send("cherubim rank")
-  elif ranktext.count("Seraphim") > 1:
+  elif ranktext.count("Seraphim") == 1:
         await ctx.channel.send("seraphim rank")
-  elif ranktext.count("Archangel") > 1:
+  elif ranktext.count("Archangel") == 1:
         await ctx.channel.send("archangel rank")
-  elif ranktext.count("Almighty") > 1:
+  elif ranktext.count("Almighty") == 1:
         await ctx.channel.send("almighty rank")
   print(ranktext)
 
