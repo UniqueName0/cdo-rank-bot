@@ -2,7 +2,6 @@ import discord
 from discord.ext import commands
 import os
 import requests
-import count
 
 try:
     from PIL import Image
@@ -31,7 +30,7 @@ async def on_message(ctx):
   file.close()
   ranktext = pytesseract.image_to_string(Image.open("rankpic.png"))
   print(ranktext)
-  await ctx.channel.send(count("Master", beg= 0, end=len(ranktext)))
+  await ctx.channel.send(ranktext.count("Master"))
 
 
 
