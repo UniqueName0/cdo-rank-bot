@@ -26,7 +26,8 @@ client = MyClient()
 async def on_message(ctx):
     if ctx.author == client.user:
         return
-      if ctx.author.bot: return
+      if ctx.author.bot:
+            return
     
   attachment = ctx.attachments[0]
   response = requests.get(attachment.url)
