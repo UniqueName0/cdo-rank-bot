@@ -30,19 +30,19 @@ async def on_message(ctx):
   file.close()
   ranktext = pytesseract.image_to_string(Image.open("rankpic.png"),config='--psm 11')
   print(ranktext)
-  if ranktext.count("Titan") == 1:
+  if ranktext.count("Titan") > 0:
         await ctx.channel.send("titan rank")
-  elif ranktext.count("Angelus") == 1:
+  elif ranktext.count("Angelus") > 0:
         await ctx.channel.send("angelus rank")
-  elif ranktext.count("Ofanim") == 1:
+  elif ranktext.count("Ofanim") > 0:
         await ctx.channel.send("ofanim rank")
-  elif ranktext.count("Cherubim") == 1:
+  elif ranktext.count("Cherubim") > 0:
         await ctx.channel.send("cherubim rank")
-  elif ranktext.count("Seraphim") == 1:
+  elif ranktext.count("Seraphim") > 0:
         await ctx.channel.send("seraphim rank")
-  elif ranktext.count("Archangel") == 1:
+  elif ranktext.count("Archangel") > 0:
         await ctx.channel.send("archangel rank")
-  elif ranktext.count("Almighty") == 1:
+  elif ranktext.count("Almighty") > 0:
         await ctx.channel.send("almighty rank")
   print(ranktext)
 
