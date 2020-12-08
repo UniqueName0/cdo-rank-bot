@@ -43,10 +43,10 @@ async def on_message(ctx):
     
     
     
-    if ranktext.count("Titan") > 0:
-        await ctx.channel.send("titan rank")
-  elif ranktext.count("Angelus") > 0:
-        await ctx.channel.send("angelus rank")
+    #if ranktext.count("Titan") > 0:
+     #   await ctx.channel.send("titan rank")
+  #elif ranktext.count("Angelus") > 0:
+   #     await ctx.channel.send("angelus rank")
   
 
 
