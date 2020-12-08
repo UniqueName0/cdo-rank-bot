@@ -28,21 +28,23 @@ async def on_message(ctx):
   file = open("rankpic.png", "wb")
   file.write(response.content)
   file.close()
-  ranktext = pytesseract.image_to_string(Image.open("rankpic.png"),config='--psm 13')
+  ranktext = pytesseract.image_to_string(Image.open("rankpic.png"),config='--psm 11')
   print(ranktext)
-  if ranktext.count("Master") > 1:
-        await ctx.channel.send("master rank")
-  elif ranktext.count("Grandmaster") > 1:
-        await ctx.channel.send("Grandmaster rank")
-  elif ranktext.count("Hero") > 1:
-        await ctx.channel.send("Hero rank")
-  elif ranktext.count("Superhero") > 1:
-        await ctx.channel.send("Superhero rank")
-  elif ranktext.count("Persona") > 1:
-        await ctx.channel.send("Persona rank")
-  elif ranktext.count("Demigod") > 1:
-        await ctx.channel.send("Demigod rank")
-  await ctx.channel.send(ranktext)
+  if ranktext.count("Titan") > 1:
+        await ctx.channel.send("titan rank")
+  elif ranktext.count("Angelus") > 1:
+        await ctx.channel.send("angelus rank")
+  elif ranktext.count("Ofanim") > 1:
+        await ctx.channel.send("ofanim rank")
+  elif ranktext.count("Cherubim") > 1:
+        await ctx.channel.send("cherubim rank")
+  elif ranktext.count("Seraphim") > 1:
+        await ctx.channel.send("seraphim rank")
+  elif ranktext.count("Archangel") > 1:
+        await ctx.channel.send("archangel rank")
+  elif ranktext.count("Almighty") > 1:
+        await ctx.channel.send("almighty rank")
+  print(ranktext)
 
 
 
