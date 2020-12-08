@@ -21,7 +21,7 @@ class MyClient(discord.Client):
 client = MyClient()
         
 @client.event
-async def on_message(ctx,channel):
+async def on_message(ctx, channel:discord.TextChannel):
   attachment = ctx.attachments[0]
   response = requests.get(attachment.url)
 
