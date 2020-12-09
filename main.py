@@ -39,8 +39,8 @@ async def on_message(ctx):
   image = cv2.imread("rankpic.png")
   hsv=cv2.cvtColor(image,cv2.COLOR_BGR2HSV)
 
-  yellow_lo=np.array([252, 157, 3])
-  yellow_hi=np.array([219, 252, 3])
+  yellow_lo=np.array([3, 157, 252])
+  yellow_hi=np.array([3, 252, 219])
   mask=cv2.inRange(hsv,yellow_lo,yellow_hi)
 
   image[mask>0]=(0,0,0)
