@@ -52,15 +52,12 @@ async def on_message(ctx):
   image[mask>0]=(0,0,0)
 
   cv2.imwrite("rankpic-1.png",image)
-  await ctx.channel.send(file=discord.File('rankpic-1.png'))
 
   img = cv2.imread('rankpic-1.png')
   img[img != 0] = 255 # change everything to white where pixel is not black
   cv2.imwrite('rankpic-edited.png', img)
 
   ranktext = pytesseract.image_to_string(Image.open('rankpic-edited.png'),config='--psm 11')
-  await ctx.channel.send("edited pic")
-  await ctx.channel.send(file=discord.File('rankpic-edited.png'))
    
   
   if get(ctx.guild.roles, name="Master") == None:
@@ -71,7 +68,7 @@ async def on_message(ctx):
     
     
   if ranktext.count("Master") > 0:
-    user = ctx.message.author
+    user = ctx.author
     await user.add_roles(master)
     mention = user.mention
     ctx.send(f"{mention} now has the Master role")
