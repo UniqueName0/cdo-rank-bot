@@ -64,19 +64,17 @@ async def on_message(ctx):
    
   
   if get(ctx.guild.roles, name="Master") == None:
-    print("if == none worked")
-  if get(ctx.guild.roles, name="Master") == False:
-    print("if == false worked")
-  #if ranktext.count("Master") > 0:
-    #if get(ctx.guild.roles, name="Master"):
-    #    pass
-    #else:
-    #    await ctx.guild.create_role(name="Master", colour=discord.Colour(0x0062ff))
-    #role = discord.utils.get(ctx.guild.roles, name="Master")
-    #user = ctx.message.author
-    #await user.add_roles(role)
-    #mention = user.mention
-    #ctx.send(f"{mention} now has the {role} role")
+    await ctx.guild.create_role(name="Master")
+  master = discord.utils.get(ctx.guild.roles, name="Master")
+  
+    
+    
+    
+  if ranktext.count("Master") > 0:
+    user = ctx.message.author
+    await user.add_roles(master)
+    mention = user.mention
+    ctx.send(f"{mention} now has the Master role")
 
 
 
