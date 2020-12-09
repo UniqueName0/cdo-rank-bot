@@ -71,12 +71,20 @@ async def on_message(ctx):
     
   if ranktext.count("Master") > 0:
     user = ctx.author
+    if master in user.roles:
+      await user.remove_roles(master)
+    if grandmaster in user.roles:
+      await user.remove_roles(grandmaster)
     await user.add_roles(master)
     mention = user.mention
     await ctx.channel.send(f"{mention} now has the Master role")
   if ranktext.count("Grandmaster") > 0:
     user = ctx.author
-    await user.add_roles(GrandMaster)
+    if master in user.roles:
+      await user.remove_roles(master)
+    if grandmaster in user.roles:
+      await user.remove_roles(grandmaster)
+    await user.add_roles(grandmaster)
     mention = user.mention
     await ctx.channel.send(f"{mention} now has the GrandMaster role")
 
