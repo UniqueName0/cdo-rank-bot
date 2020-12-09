@@ -48,9 +48,15 @@ async def on_message(ctx):
   cv2.imwrite("rankpic-1.png",image)
   await ctx.channel.send(file=discord.File('rankpic-1.png'))
 
-  img = cv2.imread('rankpic-1.png')
-  img[img != 0] = 255 # change everything to white where pixel is not black
-  cv2.imwrite('rankpic-edited.png', img)
+  img = Image.open("/pathToImage") # get image
+  pixels = img.load() # create the pixel map
+
+  for i in range(img.size[0]): # for every pixel:
+    for j in range(img.size[1]):
+      if pixels[i,j] != (0,0,0): # if not black:
+        pixels[i,j] = (255, 255, 255) # change to white
+
+  img.save("rankpic-edited.png")
 
   ranktext = pytesseract.image_to_string(Image.open('rankpic-edited.png'),config='--psm 11')
   print(ranktext)
