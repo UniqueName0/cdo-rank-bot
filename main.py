@@ -43,7 +43,7 @@ async def on_message(ctx):
   yellow_hi=np.array([3, 252, 219])
   mask=cv2.inRange(hsv,yellow_lo,yellow_hi)
 
-  image[mask>0]=(0,0,0)
+  image[mask != 0]=(0,0,0)
 
   cv2.imwrite("rankpic-1.png",image)
   await ctx.channel.send(file=discord.File('rankpic-1.png'))
