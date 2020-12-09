@@ -1,5 +1,7 @@
 import discord
 from discord.ext import commands
+import discord.utils
+from discord.utils import get
 import os
 import requests
 import cv2
@@ -60,16 +62,19 @@ async def on_message(ctx):
   print(ranktext)
   await ctx.channel.send("edited pic")
   await ctx.channel.send(file=discord.File('rankpic-edited.png'))
-    
-    
-    
-    
-    
-    #if ranktext.count("Titan") > 0:
-     #   await ctx.channel.send("titan rank")
-  #elif ranktext.count("Angelus") > 0:
-   #     await ctx.channel.send("angelus rank")
-  
+   
+
+  print(get(ctx.guild.roles, name="Master"))
+  #if ranktext.count("Master") > 0:
+    #if get(ctx.guild.roles, name="Master"):
+    #    pass
+    #else:
+    #    await ctx.guild.create_role(name="Master", colour=discord.Colour(0x0062ff))
+    #role = discord.utils.get(ctx.guild.roles, name="Master")
+    #user = ctx.message.author
+    #await user.add_roles(role)
+    #mention = user.mention
+    #ctx.send(f"{mention} now has the {role} role")
 
 
 
