@@ -63,7 +63,9 @@ async def on_message(ctx):
   if get(ctx.guild.roles, name="Master") == None:
     await ctx.guild.create_role(name="Master")
   master = discord.utils.get(ctx.guild.roles, name="Master")
-  
+  if get(ctx.guild.roles, name="GrandMaster") == None:
+    await ctx.guild.create_role(name="GrandMaster")
+  grandmaster = discord.utils.get(ctx.guild.roles, name="GrandMaster")
     
     
     
@@ -72,7 +74,11 @@ async def on_message(ctx):
     await user.add_roles(master)
     mention = user.mention
     await ctx.channel.send(f"{mention} now has the Master role")
-
+  if ranktext.count("Grandmaster") > 0:
+    user = ctx.author
+    await user.add_roles(GrandMaster)
+    mention = user.mention
+    await ctx.channel.send(f"{mention} now has the GrandMaster role")
 
 
 client.run(token)
