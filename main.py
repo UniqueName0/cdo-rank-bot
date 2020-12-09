@@ -59,11 +59,10 @@ async def on_message(ctx):
   cv2.imwrite('rankpic-edited.png', img)
 
   ranktext = pytesseract.image_to_string(Image.open('rankpic-edited.png'),config='--psm 11')
-  print(ranktext)
   await ctx.channel.send("edited pic")
   await ctx.channel.send(file=discord.File('rankpic-edited.png'))
    
-
+  
   print(get(ctx.guild.roles, name="Master"))
   #if ranktext.count("Master") > 0:
     #if get(ctx.guild.roles, name="Master"):
