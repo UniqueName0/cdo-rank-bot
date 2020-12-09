@@ -63,7 +63,10 @@ async def on_message(ctx):
   await ctx.channel.send(file=discord.File('rankpic-edited.png'))
    
   
-  print(get(ctx.guild.roles, name="Master"))
+  if get(ctx.guild.roles, name="Master") == None:
+    print("if == none worked")
+  if get(ctx.guild.roles, name="Master") == False:
+    print("if == false worked")
   #if ranktext.count("Master") > 0:
     #if get(ctx.guild.roles, name="Master"):
     #    pass
