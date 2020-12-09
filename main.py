@@ -37,12 +37,12 @@ async def on_message(ctx):
   file.write(response.content)
   file.close()
 
-  z = Color("#ffff00")
-  x = Color("#996600")
+  z = Color("#FFCFA5")
+  x = Color("#FFFFFF")
   c = list(x.range_to(z, 6))
 
   img = cv2.imread('rankpic.png')
-  img[img != [255, 207, 165]] = [255, 255, 255]
+  img[img != z] = x
   cv2.imwrite('rankpic-edited.png', img)
 
   ranktext = pytesseract.image_to_string(Image.open('rankpic-edited.png'),config='--psm 11')
