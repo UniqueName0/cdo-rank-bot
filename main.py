@@ -36,11 +36,11 @@ async def on_message(ctx):
   file.write(response.content)
   file.close()
 
-  img = cv2.imread('rankpic-2.png')
-  img[img == 0] = 255 # change everything to white where pixel is not black
-  cv2.imwrite('rankpic-edited.png', img)
+  img1 = cv2.imread('rankpic-2.png')
+  img1[img1 == 0] = 255 # change everything to white where pixel is not black
+  cv2.imwrite('rankpic-edited.png', img1)
   
-  image = cv2.imread("rankpic.png")
+  image = cv2.imread("rankpic-2.png")
   hsv=cv2.cvtColor(image,cv2.COLOR_BGR2HSV)
 
   yellow_lo=np.array([10,41,133])
