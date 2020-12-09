@@ -36,13 +36,21 @@ async def on_message(ctx):
   file = open("rankpic.png", "wb")
   file.write(response.content)
   file.close()
+  
+  image = cv.imread("rankpic.png")
+  hsv=cv.cvtColor(image,cv.COLOR_BGR2HSV)
 
-  z = Color("#FFCFA5")
-  x = Color("#FFFFFF")
-  c = list(x.range_to(z, 6))
+  yellow_lo=np.array([10,0,0])
+  yellow_hi=np.array([20,255,255])
+  mask=cv.inRange(hsv,yellow_lo,yellow_hi)
 
-  img = cv2.imread('rankpic.png')
-  img[img != z] = x
+  image[mask>0]=(0,0,0)
+
+  cv.imwrite("rankpic-1.png",image)
+  await ctx.channel.send(file=discord.File('rankpic-1.png'))
+
+  img = cv2.imread('rankpic-1.png')
+  img[img != 0] = 255 # change everything to white where pixel is not black
   cv2.imwrite('rankpic-edited.png', img)
 
   ranktext = pytesseract.image_to_string(Image.open('rankpic-edited.png'),config='--psm 11')
