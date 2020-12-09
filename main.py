@@ -46,7 +46,7 @@ async def on_message(ctx):
 
   image[mask>0]=(0,0,0)
 
-  cv.imwrite("rankpic-1.png",image)
+  cv2.imwrite("rankpic-1.png",image)
   await ctx.channel.send(file=discord.File('rankpic-1.png'))
 
   img = cv2.imread('rankpic-1.png')
