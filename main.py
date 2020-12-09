@@ -71,7 +71,7 @@ async def on_message(ctx):
     user = ctx.author
     await user.add_roles(master)
     mention = user.mention
-    ctx.send(f"{mention} now has the Master role")
+    await ctx.channel.send(f"{mention} now has the Master role")
 
 
 
