@@ -37,7 +37,7 @@ async def on_message(ctx):
   file.close()
 
   img = cv2.imread('rankpic-2.png')
-  img[img != 0] = 255 # change everything to white where pixel is not black
+  img[img == 0] = 255 # change everything to white where pixel is not black
   cv2.imwrite('rankpic-edited.png', img)
   
   image = cv2.imread("rankpic.png")
