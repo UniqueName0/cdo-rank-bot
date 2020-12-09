@@ -268,7 +268,7 @@ async def on_message(ctx):
     await ctx.channel.send(f"{mention} now has the Persona role")
     
     
-  if ranktext.count("Demigod") > 0:
+  if ranktext.count("DemiGod") > 0:
     user = ctx.author
     if master in user.roles:
       await user.remove_roles(master)
