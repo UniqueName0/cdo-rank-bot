@@ -48,7 +48,7 @@ async def on_message(ctx):
   cv2.imwrite("rankpic-1.png",image)
   await ctx.channel.send(file=discord.File('rankpic-1.png'))
 
-  img = Image.open("/pathToImage") # get image
+  img = Image.open("rankpic-1.png") # get image
   pixels = img.load() # create the pixel map
 
   for i in range(img.size[0]): # for every pixel:
