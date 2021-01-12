@@ -100,7 +100,6 @@ async def on_message(ctx):
     
     
 async def Addrole(role):
-  role0 = discord.utils.get(serv.roles, name=role)
   if ranktext.count(role) > 0:
     if master in user.roles:
       await user.remove_roles(master)
