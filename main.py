@@ -94,7 +94,7 @@ async def on_message(ctx):
     
     
     
-async def AddRole(role):
+async def Addrole(role):
   if get(ctx.guild.roles, name=role) == None:
     await ctx.guild.create_role(name=role)
   role0 = discord.utils.get(ctx.guild.roles, name=role)
