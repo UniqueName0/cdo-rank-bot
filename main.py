@@ -40,7 +40,7 @@ async def on_message(ctx):
   file.close()
 
   img1 = cv2.imread('rankpic-2.png')
-  img1[img1 == 0] = 255 # change everything to white where pixel is not black
+  img1[img1 == 0] = 255 
   cv2.imwrite('rankpic-edited.png', img1)
   
   image = cv2.imread("rankpic-2.png")
@@ -55,7 +55,7 @@ async def on_message(ctx):
   cv2.imwrite("rankpic-1.png",image)
 
   img = cv2.imread('rankpic-1.png')
-  img[img != 0] = 255 # change everything to white where pixel is not black
+  img[img != 0] = 255 
   cv2.imwrite('rankpic-edited.png', img)
 
   ranktext = pytesseract.image_to_string(Image.open('rankpic-edited.png'),config='--psm 11')
