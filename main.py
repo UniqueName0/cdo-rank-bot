@@ -71,19 +71,19 @@ async def on_message(ctx):
     
     
     
-  Addrole("Master")
-  Addrole("GrandMaster")
-  Addrole("Hero")
-  Addrole("SuperHero")
-  Addrole("Persona")
-  Addrole("DemiGod")
-  Addrole("Titan")
-  Addrole("Angelus")
-  Addrole("Ofanim")
-  Addrole("Cherobim")
-  Addrole("Seraphim")
-  Addrole("ArchAngel")
-  Addrole("Almighty")
+  await Addrole("Master")
+  await Addrole("GrandMaster")
+  await Addrole("Hero")
+  await Addrole("SuperHero")
+  await Addrole("Persona")
+  await Addrole("DemiGod")
+  await Addrole("Titan")
+  await Addrole("Angelus")
+  await Addrole("Ofanim")
+  await Addrole("Cherobim")
+  await Addrole("Seraphim")
+  await Addrole("ArchAngel")
+  await Addrole("Almighty")
     
     
     
