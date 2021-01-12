@@ -73,6 +73,9 @@ async def on_message(ctx):
   user = ctx.author
   ch = ctx.channel
     
+  if get(ctx.guild.roles, name="Master") == None:
+    await ctx.guild.create_role(name="Master")
+  role0 = discord.utils.get(ctx.guild.roles, name="Master")
   await Addrole("Master")
   await Addrole("GrandMaster")
   await Addrole("Hero")
@@ -97,8 +100,6 @@ async def on_message(ctx):
     
     
 async def Addrole(role):
-  if get(serv.roles, name=role) == None:
-    await serv.create_role(name=role)
   role0 = discord.utils.get(serv.roles, name=role)
   if ranktext.count(role) > 0:
     if master in user.roles:
