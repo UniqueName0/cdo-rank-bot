@@ -64,7 +64,35 @@ async def on_message(ctx):
     await ctx.guild.create_role(name="Master")
   master = discord.utils.get(ctx.guild.roles, name="Master")
     
-  Addrole(Master)
+    
+    
+    
+    
+    
+    
+    
+  Addrole("Master")
+  Addrole("GrandMaster")
+  Addrole("Hero")
+  Addrole("SuperHero")
+  Addrole("Persona")
+  Addrole("DemiGod")
+  Addrole("Titan")
+  Addrole("Angelus")
+  Addrole("Ofanim")
+  Addrole("Cherobim")
+  Addrole("Seraphim")
+  Addrole("ArchAngel")
+  Addrole("Almighty")
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
 async def AddRole(role):
   if get(ctx.guild.roles, name=role) == None:
