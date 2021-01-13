@@ -106,108 +106,6 @@ async def on_message(ctx):
     
   if ranktext.count("Master") > 0:
     user = ctx.author
-    await deleteRoles()
-    await user.add_roles(master)
-    mention = user.mention
-    await ctx.channel.send(f"{mention} now has the Master role")
-    
-    
-  if ranktext.count("Grandmaster") > 0:
-    user = ctx.author
-    await deleteRoles()
-    await user.add_roles(grandmaster)
-    mention = user.mention
-    await ctx.channel.send(f"{mention} now has the GrandMaster role")
-    
-    
-  if ranktext.count("Hero") > 0:
-    user = ctx.author
-    await deleteRoles()
-    await user.add_roles(hero)
-    mention = user.mention
-    await ctx.channel.send(f"{mention} now has the Hero role")
-    
-    
-  if ranktext.count("Superhero") > 0:
-    user = ctx.author
-    await deleteRoles()
-    await user.add_roles(superhero)
-    mention = user.mention
-    await ctx.channel.send(f"{mention} now has the SuperHero role")
-    
-  
-  if ranktext.count("Persona") > 0:
-    user = ctx.author
-    await deleteRoles()
-    await user.add_roles(persona)
-    mention = user.mention
-    await ctx.channel.send(f"{mention} now has the Persona role")
-    
-    
-  if ranktext.count("DemiGod") > 0:
-    user = ctx.author
-    await deleteRoles()
-    await user.add_roles(demigod)
-    mention = user.mention
-    await ctx.channel.send(f"{mention} now has the DemiGod role")
-    
-    
-  if ranktext.count("Titan") > 0:
-    user = ctx.author
-    await deleteRoles()
-    await user.add_roles(titan)
-    mention = user.mention
-    await ctx.channel.send(f"{mention} now has the Titan role")
-    
-    
-  if ranktext.count("Angelus") > 0:
-    user = ctx.author
-    await deleteRoles()
-    await user.add_roles(angelus)
-    mention = user.mention
-    await ctx.channel.send(f"{mention} now has the Angelus role")
-    
-    
-  if ranktext.count("Ofanim") > 0:
-    user = ctx.author
-    await deleteRoles()
-    await user.add_roles(ofanim)
-    mention = user.mention
-    await ctx.channel.send(f"{mention} now has the Ofanim role")
-    
-    
-  if ranktext.count("Cherubim") > 0:
-    user = ctx.author
-    await deleteRoles()
-    await user.add_roles(cherubim)
-    mention = user.mention
-    await ctx.channel.send(f"{mention} now has the Cherubim role")
-    
-    
-  if ranktext.count("Seraphim") > 0:
-    user = ctx.author
-    await deleteRoles()
-    await user.add_roles(seraphim)
-    mention = user.mention
-    await ctx.channel.send(f"{mention} now has the Serphim role")
-    
-    
-  if ranktext.count("Archangel") > 0:
-    user = ctx.author
-    await deleteRoles()
-    await user.add_roles(archangel)
-    mention = user.mention
-    await ctx.channel.send(f"{mention} now has the ArchAngel role")
-    
-    
-  if ranktext.count("Almighty") > 0:
-    user = ctx.author
-    await deleteRoles()
-    await user.add_roles(almighty)
-    mention = user.mention
-    await ctx.channel.send(f"{mention} now has the Almighty role")
-    
-async def deleteRoles():
     if master in user.roles:
       await user.remove_roles(master)
     if grandmaster in user.roles:
@@ -234,6 +132,407 @@ async def deleteRoles():
       await user.remove_roles(archangel)
     if almighty in user.roles:
       await user.remove_roles(almighty)
+    await user.add_roles(master)
+    mention = user.mention
+    await ctx.channel.send(f"{mention} now has the Master role")
+    
+    
+  if ranktext.count("Grandmaster") > 0:
+    user = ctx.author
+    if master in user.roles:
+      await user.remove_roles(master)
+    if grandmaster in user.roles:
+      await user.remove_roles(grandmaster)
+    if hero in user.roles:
+      await user.remove_roles(hero)
+    if superhero in user.roles:
+      await user.remove_roles(superhero)
+    if persona in user.roles:
+      await user.remove_roles(persona)
+    if demigod in user.roles:
+      await user.remove_roles(demigod)
+    if titan in user.roles:
+      await user.remove_roles(titan)
+    if angelus in user.roles:
+      await user.remove_roles(angelus)
+    if ofanim in user.roles:
+      await user.remove_roles(ofanim)
+    if cherubim in user.roles:
+      await user.remove_roles(cherubim)
+    if seraphim in user.roles:
+      await user.remove_roles(seraphim)
+    if archangel in user.roles:
+      await user.remove_roles(archangel)
+    if almighty in user.roles:
+      await user.remove_roles(almighty)
+    await user.add_roles(grandmaster)
+    mention = user.mention
+    await ctx.channel.send(f"{mention} now has the GrandMaster role")
+    
+    
+  if ranktext.count("Hero") > 0:
+    user = ctx.author
+    if master in user.roles:
+      await user.remove_roles(master)
+    if grandmaster in user.roles:
+      await user.remove_roles(grandmaster)
+    if hero in user.roles:
+      await user.remove_roles(hero)
+    if superhero in user.roles:
+      await user.remove_roles(superhero)
+    if persona in user.roles:
+      await user.remove_roles(persona)
+    if demigod in user.roles:
+      await user.remove_roles(demigod)
+    if titan in user.roles:
+      await user.remove_roles(titan)
+    if angelus in user.roles:
+      await user.remove_roles(angelus)
+    if ofanim in user.roles:
+      await user.remove_roles(ofanim)
+    if cherubim in user.roles:
+      await user.remove_roles(cherubim)
+    if seraphim in user.roles:
+      await user.remove_roles(seraphim)
+    if archangel in user.roles:
+      await user.remove_roles(archangel)
+    if almighty in user.roles:
+      await user.remove_roles(almighty)
+    await user.add_roles(hero)
+    mention = user.mention
+    await ctx.channel.send(f"{mention} now has the Hero role")
+    
+    
+  if ranktext.count("Superhero") > 0:
+    user = ctx.author
+    if master in user.roles:
+      await user.remove_roles(master)
+    if grandmaster in user.roles:
+      await user.remove_roles(grandmaster)
+    if hero in user.roles:
+      await user.remove_roles(hero)
+    if superhero in user.roles:
+      await user.remove_roles(superhero)
+    if persona in user.roles:
+      await user.remove_roles(persona)
+    if demigod in user.roles:
+      await user.remove_roles(demigod)
+    if titan in user.roles:
+      await user.remove_roles(titan)
+    if angelus in user.roles:
+      await user.remove_roles(angelus)
+    if ofanim in user.roles:
+      await user.remove_roles(ofanim)
+    if cherubim in user.roles:
+      await user.remove_roles(cherubim)
+    if seraphim in user.roles:
+      await user.remove_roles(seraphim)
+    if archangel in user.roles:
+      await user.remove_roles(archangel)
+    if almighty in user.roles:
+      await user.remove_roles(almighty)
+    await user.add_roles(superhero)
+    mention = user.mention
+    await ctx.channel.send(f"{mention} now has the SuperHero role")
+    
+  
+  if ranktext.count("Persona") > 0:
+    user = ctx.author
+    if master in user.roles:
+      await user.remove_roles(master)
+    if grandmaster in user.roles:
+      await user.remove_roles(grandmaster)
+    if hero in user.roles:
+      await user.remove_roles(hero)
+    if superhero in user.roles:
+      await user.remove_roles(superhero)
+    if persona in user.roles:
+      await user.remove_roles(persona)
+    if demigod in user.roles:
+      await user.remove_roles(demigod)
+    if titan in user.roles:
+      await user.remove_roles(titan)
+    if angelus in user.roles:
+      await user.remove_roles(angelus)
+    if ofanim in user.roles:
+      await user.remove_roles(ofanim)
+    if cherubim in user.roles:
+      await user.remove_roles(cherubim)
+    if seraphim in user.roles:
+      await user.remove_roles(seraphim)
+    if archangel in user.roles:
+      await user.remove_roles(archangel)
+    if almighty in user.roles:
+      await user.remove_roles(almighty)
+    await user.add_roles(persona)
+    mention = user.mention
+    await ctx.channel.send(f"{mention} now has the Persona role")
+    
+    
+  if ranktext.count("DemiGod") > 0:
+    user = ctx.author
+    if master in user.roles:
+      await user.remove_roles(master)
+    if grandmaster in user.roles:
+      await user.remove_roles(grandmaster)
+    if hero in user.roles:
+      await user.remove_roles(hero)
+    if superhero in user.roles:
+      await user.remove_roles(superhero)
+    if persona in user.roles:
+      await user.remove_roles(persona)
+    if demigod in user.roles:
+      await user.remove_roles(demigod)
+    if titan in user.roles:
+      await user.remove_roles(titan)
+    if angelus in user.roles:
+      await user.remove_roles(angelus)
+    if ofanim in user.roles:
+      await user.remove_roles(ofanim)
+    if cherubim in user.roles:
+      await user.remove_roles(cherubim)
+    if seraphim in user.roles:
+      await user.remove_roles(seraphim)
+    if archangel in user.roles:
+      await user.remove_roles(archangel)
+    if almighty in user.roles:
+      await user.remove_roles(almighty)
+    await user.add_roles(demigod)
+    mention = user.mention
+    await ctx.channel.send(f"{mention} now has the DemiGod role")
+    
+    
+  if ranktext.count("Titan") > 0:
+    user = ctx.author
+    if master in user.roles:
+      await user.remove_roles(master)
+    if grandmaster in user.roles:
+      await user.remove_roles(grandmaster)
+    if hero in user.roles:
+      await user.remove_roles(hero)
+    if superhero in user.roles:
+      await user.remove_roles(superhero)
+    if persona in user.roles:
+      await user.remove_roles(persona)
+    if demigod in user.roles:
+      await user.remove_roles(demigod)
+    if titan in user.roles:
+      await user.remove_roles(titan)
+    if angelus in user.roles:
+      await user.remove_roles(angelus)
+    if ofanim in user.roles:
+      await user.remove_roles(ofanim)
+    if cherubim in user.roles:
+      await user.remove_roles(cherubim)
+    if seraphim in user.roles:
+      await user.remove_roles(seraphim)
+    if archangel in user.roles:
+      await user.remove_roles(archangel)
+    if almighty in user.roles:
+      await user.remove_roles(almighty)
+    await user.add_roles(titan)
+    mention = user.mention
+    await ctx.channel.send(f"{mention} now has the Titan role")
+    
+    
+  if ranktext.count("Angelus") > 0:
+    user = ctx.author
+    if master in user.roles:
+      await user.remove_roles(master)
+    if grandmaster in user.roles:
+      await user.remove_roles(grandmaster)
+    if hero in user.roles:
+      await user.remove_roles(hero)
+    if superhero in user.roles:
+      await user.remove_roles(superhero)
+    if persona in user.roles:
+      await user.remove_roles(persona)
+    if demigod in user.roles:
+      await user.remove_roles(demigod)
+    if titan in user.roles:
+      await user.remove_roles(titan)
+    if angelus in user.roles:
+      await user.remove_roles(angelus)
+    if ofanim in user.roles:
+      await user.remove_roles(ofanim)
+    if cherubim in user.roles:
+      await user.remove_roles(cherubim)
+    if seraphim in user.roles:
+      await user.remove_roles(seraphim)
+    if archangel in user.roles:
+      await user.remove_roles(archangel)
+    if almighty in user.roles:
+      await user.remove_roles(almighty)
+    await user.add_roles(angelus)
+    mention = user.mention
+    await ctx.channel.send(f"{mention} now has the Angelus role")
+    
+    
+  if ranktext.count("Ofanim") > 0:
+    user = ctx.author
+    if master in user.roles:
+      await user.remove_roles(master)
+    if grandmaster in user.roles:
+      await user.remove_roles(grandmaster)
+    if hero in user.roles:
+      await user.remove_roles(hero)
+    if superhero in user.roles:
+      await user.remove_roles(superhero)
+    if persona in user.roles:
+      await user.remove_roles(persona)
+    if demigod in user.roles:
+      await user.remove_roles(demigod)
+    if titan in user.roles:
+      await user.remove_roles(titan)
+    if angelus in user.roles:
+      await user.remove_roles(angelus)
+    if ofanim in user.roles:
+      await user.remove_roles(ofanim)
+    if cherubim in user.roles:
+      await user.remove_roles(cherubim)
+    if seraphim in user.roles:
+      await user.remove_roles(seraphim)
+    if archangel in user.roles:
+      await user.remove_roles(archangel)
+    if almighty in user.roles:
+      await user.remove_roles(almighty)
+    await user.add_roles(ofanim)
+    mention = user.mention
+    await ctx.channel.send(f"{mention} now has the Ofanim role")
+    
+    
+  if ranktext.count("Cherubim") > 0:
+    user = ctx.author
+    if master in user.roles:
+      await user.remove_roles(master)
+    if grandmaster in user.roles:
+      await user.remove_roles(grandmaster)
+    if hero in user.roles:
+      await user.remove_roles(hero)
+    if superhero in user.roles:
+      await user.remove_roles(superhero)
+    if persona in user.roles:
+      await user.remove_roles(persona)
+    if demigod in user.roles:
+      await user.remove_roles(demigod)
+    if titan in user.roles:
+      await user.remove_roles(titan)
+    if angelus in user.roles:
+      await user.remove_roles(angelus)
+    if ofanim in user.roles:
+      await user.remove_roles(ofanim)
+    if cherubim in user.roles:
+      await user.remove_roles(cherubim)
+    if seraphim in user.roles:
+      await user.remove_roles(seraphim)
+    if archangel in user.roles:
+      await user.remove_roles(archangel)
+    if almighty in user.roles:
+      await user.remove_roles(almighty)
+    await user.add_roles(cherubim)
+    mention = user.mention
+    await ctx.channel.send(f"{mention} now has the Cherubim role")
+    
+    
+  if ranktext.count("Seraphim") > 0:
+    user = ctx.author
+    if master in user.roles:
+      await user.remove_roles(master)
+    if grandmaster in user.roles:
+      await user.remove_roles(grandmaster)
+    if hero in user.roles:
+      await user.remove_roles(hero)
+    if superhero in user.roles:
+      await user.remove_roles(superhero)
+    if persona in user.roles:
+      await user.remove_roles(persona)
+    if demigod in user.roles:
+      await user.remove_roles(demigod)
+    if titan in user.roles:
+      await user.remove_roles(titan)
+    if angelus in user.roles:
+      await user.remove_roles(angelus)
+    if ofanim in user.roles:
+      await user.remove_roles(ofanim)
+    if cherubim in user.roles:
+      await user.remove_roles(cherubim)
+    if seraphim in user.roles:
+      await user.remove_roles(seraphim)
+    if archangel in user.roles:
+      await user.remove_roles(archangel)
+    if almighty in user.roles:
+      await user.remove_roles(almighty)
+    await user.add_roles(seraphim)
+    mention = user.mention
+    await ctx.channel.send(f"{mention} now has the Serphim role")
+    
+    
+  if ranktext.count("Archangel") > 0:
+    user = ctx.author
+    if master in user.roles:
+      await user.remove_roles(master)
+    if grandmaster in user.roles:
+      await user.remove_roles(grandmaster)
+    if hero in user.roles:
+      await user.remove_roles(hero)
+    if superhero in user.roles:
+      await user.remove_roles(superhero)
+    if persona in user.roles:
+      await user.remove_roles(persona)
+    if demigod in user.roles:
+      await user.remove_roles(demigod)
+    if titan in user.roles:
+      await user.remove_roles(titan)
+    if angelus in user.roles:
+      await user.remove_roles(angelus)
+    if ofanim in user.roles:
+      await user.remove_roles(ofanim)
+    if cherubim in user.roles:
+      await user.remove_roles(cherubim)
+    if seraphim in user.roles:
+      await user.remove_roles(seraphim)
+    if archangel in user.roles:
+      await user.remove_roles(archangel)
+    if almighty in user.roles:
+      await user.remove_roles(almighty)
+    await user.add_roles(archangel)
+    mention = user.mention
+    await ctx.channel.send(f"{mention} now has the ArchAngel role")
+    
+    
+  if ranktext.count("Almighty") > 0:
+    user = ctx.author
+    if master in user.roles:
+      await user.remove_roles(master)
+    if grandmaster in user.roles:
+      await user.remove_roles(grandmaster)
+    if hero in user.roles:
+      await user.remove_roles(hero)
+    if superhero in user.roles:
+      await user.remove_roles(superhero)
+    if persona in user.roles:
+      await user.remove_roles(persona)
+    if demigod in user.roles:
+      await user.remove_roles(demigod)
+    if titan in user.roles:
+      await user.remove_roles(titan)
+    if angelus in user.roles:
+      await user.remove_roles(angelus)
+    if ofanim in user.roles:
+      await user.remove_roles(ofanim)
+    if cherubim in user.roles:
+      await user.remove_roles(cherubim)
+    if seraphim in user.roles:
+      await user.remove_roles(seraphim)
+    if archangel in user.roles:
+      await user.remove_roles(archangel)
+    if almighty in user.roles:
+      await user.remove_roles(almighty)
+    await user.add_roles(almighty)
+    mention = user.mention
+    await ctx.channel.send(f"{mention} now has the Almighty role")
+    
+    
     
 
 
