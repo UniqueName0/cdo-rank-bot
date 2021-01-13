@@ -1,9 +1,9 @@
 a discord bot to automatically give roles to users based on their rank in cdo(castle defense online)
 made with discord.py
 
+![alt text](https://github.com/UniqueName0/cdo-rank-bot/blob/main/images/demoImageThing.png?raw=true)
 
 it currently only works for people that have english selected as their language in cdo, I'll be adding support for more languages later.
-
 
 to use the bot simply post a screenshot of your rank from the "my info" tab and it will give you your role within a few minutes. 
 
